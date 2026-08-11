@@ -1,6 +1,18 @@
 <html>
   <head>
     <link rel="stylesheet" href="flowy/flowy.min.css" />
+    <style>
+      #canvas {
+        position: absolute;
+        width: calc(100% - 361px);
+        height: calc(100% - 71px);
+        top: 71px;
+        left: 361px;
+        z-index: 0;
+        overflow: auto;
+        border: 1px solid black;
+      }
+    </style>
   </head>
   <body>
     <h1>My chart</h1>

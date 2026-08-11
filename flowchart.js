@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
       };
 
       flow.add(block);
+      window.alert('block added');
 
       consoleElement.textContent += 'Block added: ' + block.title + '\n';
     });

@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
     scale: true,
     translate: true,
   });
-
+  
+  // write start string to the console element
+  consoleElement.textContent = 'Flowchart started\n';
   if (addBlockButton) {
     addBlockButton.addEventListener('click', function () {
       const block = {

@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         title: 'New block',
       };
 
-      flow.add(block);
+      // flow.add(block);
       window.alert('block added');
 
       consoleElement.textContent += 'Block added: ' + block.title + '\n';

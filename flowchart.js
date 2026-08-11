@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const addBlockButton = document.getElementById('add-block');
   const consoleElement = document.getElementById('console');
 
+  window.alert('Flowchart loaded');
   if (!canvas) {
     return;
   }

@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     el1.textContent = "Element 1";
     el1.classList.add("create-flowy");
+
+    canvas.appendChild(el1);
   });
 
   addEl2.addEventListener("click", function() {
@@ -17,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     el2.textContent = "Element 2";
     el2.classList.add("create-flowy");
+
+    canvas.appendChild(el2);
   });
 
   window.alert('Flowchart loaded');

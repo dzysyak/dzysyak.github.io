@@ -2,8 +2,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const canvas = document.getElementById('canvas');
   const addBlockButton = document.getElementById('add-block');
   const consoleElement = document.getElementById('console');
-  const addEl1 = document.getElementById("");
-  const addEl2 = document.getElementById("");
+  const addEl1 = document.getElementById("add_element1");
+  const addEl2 = document.getElementById("add_element2");
+
+  addEl1.addEventListener("click", function(){
+
+  });
+
+  addEl2.addEventListener("click", function() {
+    
+  });
 
   window.alert('Flowchart loaded');
   if (!canvas) {

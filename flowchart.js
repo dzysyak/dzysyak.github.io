@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const canvas = document.getElementById('canvas');
   const addBlockButton = document.getElementById('add-block');
   const consoleElement = document.getElementById('console');
+  const addEl1 = document.getElementById("");
+  const addEl2 = document.getElementById("");
 
   window.alert('Flowchart loaded');
   if (!canvas) {

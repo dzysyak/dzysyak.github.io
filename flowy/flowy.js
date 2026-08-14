@@ -399,6 +399,12 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
             checkOffset();
         }
 
+        function addBlock(block){
+            let bloko = blocks.map(a => a.id);
+
+            
+        }
+
         function touchblock(event) {
             dragblock = false;
             if (hasParentClass(event.target, "block")) {
@@ -626,7 +632,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
 
         document.addEventListener("mouseup", flowy.endDrag, false);
         document.addEventListener("touchend", flowy.endDrag, false);
-    }
+    
 
     function blockGrabbed(block) {
         grab(block);

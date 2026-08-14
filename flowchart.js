@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const addEl2 = document.getElementById("add_element2");
 
   addEl1.addEventListener("click", function(){
+    let el1 = document.createElement("div");
 
+    el1.textContent = "Element 1";
+    el1.classList.add("create-flowy");
   });
 
   addEl2.addEventListener("click", function() {

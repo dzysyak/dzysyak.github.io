@@ -400,6 +400,12 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
         }
 
         function addBlock(block){
+            if(blocks.lengs == 0){
+
+            }else{
+
+            }
+
             let bloko = blocks.map(a => a.id);
 
             

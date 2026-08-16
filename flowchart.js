@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
     return;
   }
 
-  consoleElement.innerText += 'flow chart started \n';
+  consoleElement.innerText += 'flow chart started 1\n';
 
   const flow = flowy(canvas);
   
   // write start string to the console element
-  consoleElement.innerText += 'Flowchart started\n';
+  consoleElement.innerText += 'Flowchart started 2\n';
   window.alert('Flowchart started');
   if (addBlockButton) {
     addBlockButton.addEventListener('click', function () {

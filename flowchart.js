@@ -27,11 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return;
   }
 
-  const flow = flowy(canvas, {
-    drag: true,
-    scale: true,
-    translate: true,
-  });
+  const flow = flowy(canvas);
   
   // write start string to the console element
   consoleElement.textContent += 'Flowchart started\n';

@@ -407,7 +407,10 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
               window.alert("no element selected");
             }
 
-            
+            let div = document.createElement("div");
+            div.classList.add("block");
+            div.classList.add("create-flowy");
+            div.innerText = drag.innerText;
 
             let bloko = blocks.map(a => a.id);
 

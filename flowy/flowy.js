@@ -35,6 +35,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
             return null;
         };
     }
+
     var loaded = false;
     flowy.load = function() {
         if (!loaded)
@@ -408,7 +409,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
 
             let bloko = blocks.map(a => a.id);
 
-            
+            console.log(drag.innerText);
         }
 
         function touchblock(event) {

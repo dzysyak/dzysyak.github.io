@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   
   // write start string to the console element
-  consoleElement.textContent = 'Flowchart started\n';
+  consoleElement.textContent += 'Flowchart started\n';
   if (addBlockButton) {
     addBlockButton.addEventListener('click', function () {
       const block = {

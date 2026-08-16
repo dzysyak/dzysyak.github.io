@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
     canvas.appendChild(el2);
   });
 
-  window.alert('Flowchart loaded');
   if (!canvas) {
     return;
   }
@@ -47,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
       window.alert('block added');
 
       consoleElement.textContent += 'Block added: ' + block.title + '\n';
+
+      flow.add(block);
     });
   }
 });

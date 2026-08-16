@@ -401,10 +401,10 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
         }
 
         function addBlock(block){
-            if(blocks.lengs == 0){
-
+            if(drag){
+              window.alert('block selected');
             }else{
-
+              window.alert("no element selected");
             }
 
             let bloko = blocks.map(a => a.id);

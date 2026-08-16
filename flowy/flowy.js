@@ -407,6 +407,8 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
               window.alert("no element selected");
             }
 
+            
+
             let bloko = blocks.map(a => a.id);
 
             console.log(drag.innerText);

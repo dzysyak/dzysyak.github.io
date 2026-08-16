@@ -412,6 +412,8 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
             div.classList.add("create-flowy");
             div.innerText = drag.innerText;
 
+            canvas_div.appendChild(div);
+
             let bloko = blocks.map(a => a.id);
 
             console.log(drag.innerText);

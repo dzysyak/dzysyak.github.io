@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   consoleElement.innerText += 'flow chart started 1\n';
 
-  const flow = flowy(canvas);
+  flowy(canvas);
   
   // write start string to the console element
   consoleElement.innerText += 'Flowchart started 2\n';

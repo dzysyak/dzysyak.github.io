@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   window.onerror = function(e) {
-      alert(e.message, e.filename, e.lineno);
+      window.alert(e.message, e.filename, e.lineno);
   }
 
   consoleElement.innerText += 'flow chart started 1\n';

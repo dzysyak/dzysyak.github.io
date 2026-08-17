@@ -35,6 +35,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
             return null;
         };
     }
+
     var loaded = false;
     flowy.load = function() {
         if (!loaded)
@@ -114,10 +115,6 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
                 return json_data;
             }
         }
-        flowy.addBlock(el) = function(){
-          window.alert("add block");
-        }
-
         flowy.deleteBlocks = function() {
             blocks = [];
             canvas_div.innerHTML = "<div class='indicator invisible'></div>";
@@ -403,6 +400,25 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
             checkOffset();
         }
 
+        function addBlock(block){
+            if(drag){
+              window.alert('block selected');
+            }else{
+              window.alert("no element selected");
+            }
+
+            let div = document.createElement("div");
+            div.classList.add("block");
+            div.classList.add("create-flowy");
+            div.innerText = drag.innerText;
+
+            canvas_div.appendChild(div);
+
+            let bloko = blocks.map(a => a.id);
+
+            console.log(drag.innerText);
+        }
+
         function touchblock(event) {
             dragblock = false;
             if (hasParentClass(event.target, "block")) {
@@ -630,7 +646,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
 
         document.addEventListener("mouseup", flowy.endDrag, false);
         document.addEventListener("touchend", flowy.endDrag, false);
-    }
+    
 
     function blockGrabbed(block) {
         grab(block);

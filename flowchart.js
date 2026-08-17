@@ -27,6 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
     return;
   }
 
+  window.onerror = function(e) {
+      alert(e.message, e.filename, e.lineno);
+  }
+
   consoleElement.innerText += 'flow chart started 1\n';
 
   const flow = flowy(canvas);

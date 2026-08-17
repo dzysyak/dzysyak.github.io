@@ -114,7 +114,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
                 return json_data;
             }
         }
-        flowy.addBlock(el) = function(){
+        flowy.addBlock = function(el){
           window.alert("add block");
         }
 

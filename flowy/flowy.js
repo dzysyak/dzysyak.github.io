@@ -115,7 +115,14 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
             }
         }
         flowy.addBlock = function(el){
-          window.alert("add block");
+          if (drag) {
+            window.alert("block selected");
+          } else {
+            window.alert("no block selected");
+          }
+
+          canvas_div.appendChild(el);
+          //window.alert("add block");
         }
 
         flowy.deleteBlocks = function() {

@@ -131,6 +131,15 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
           canvas_div.appendChild(el);
           //snap(el, k, blocko);
           //window.alert("add block");
+          blocks.push({
+                    parent: -1,
+                    childwidth: 0,
+                    id: parseInt(drag.querySelector(".blockid").value),
+                    x: (drag.getBoundingClientRect().left + window.scrollX) + (parseInt(window.getComputedStyle(drag).width) / 2) + canvas_div.scrollLeft - canvas_div.getBoundingClientRect().left,
+                    y: (drag.getBoundingClientRect().top + window.scrollY) + (parseInt(window.getComputedStyle(drag).height) / 2) + canvas_div.scrollTop - canvas_div.getBoundingClientRect().top,
+                    width: parseInt(window.getComputedStyle(drag).width),
+                    height: parseInt(window.getComputedStyle(drag).height)
+                });
         }
 
         flowy.deleteBlocks = function() {

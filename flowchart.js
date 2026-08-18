@@ -33,13 +33,13 @@ document.addEventListener('DOMContentLoaded', function () {
       consoleElement.innerText += (message+" "+"("+source+" "+lineno+")");
   }
 
-  consoleElement.innerText += 'flow chart started 1\n';
+  //consoleElement.innerText += 'flow chart started 1\n';
 
   flowy(canvas);
   
   // write start string to the console element
   consoleElement.innerText += 'Flowchart started 2\n';
-  window.alert('Flowchart started');
+  //window.alert('Flowchart started');
   if (addBlockButton) {
     addBlockButton.addEventListener('click', function () {
       const block = {
@@ -50,11 +50,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
       // flow.add(block);
-      window.alert('block added');
+      //window.alert('block added');
 
       consoleElement.textContent += 'Block added: ' + block.title + '\n';
 
-      flow.addBlock(block);
+      //flow.addBlock(block);
     });
   }
 });

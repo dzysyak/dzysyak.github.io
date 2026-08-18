@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let el2 = document.createElement("div");
 
     el2.textContent = "Element 2";
-    el2.classList.add("create-flowy");
+    //el2.classList.add("create-flowy");
+    el2.classList.add("block");
 
     //canvas.appendChild(el2);
     flowy.addBlock(el2);

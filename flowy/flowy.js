@@ -121,6 +121,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
             window.alert("no block selected");
           }
           el.innerHTML += "<input type='text' name='blockid' class='blockid' value='"+blocks.length+"'";
+          window.alert(el.innerHTML);
 
           canvas_div.appendChild(el);
           //snap(el, k, blocko);

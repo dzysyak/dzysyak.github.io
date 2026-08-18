@@ -122,6 +122,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
           }
 
           canvas_div.appendChild(el);
+          //snap(el, k, blocko);
           //window.alert("add block");
         }
 
@@ -249,7 +250,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
                 active = false;
                 drag.style.top = (drag.getBoundingClientRect().top + window.scrollY) - (absy + window.scrollY) + canvas_div.scrollTop + "px";
                 drag.style.left = (drag.getBoundingClientRect().left + window.scrollX) - (absx + window.scrollX) + canvas_div.scrollLeft + "px";
-                canvas_div.appendChild(drag);
+                canvas_div.appendChild(drag); I'm
                 blocks.push({
                     parent: -1,
                     childwidth: 0,

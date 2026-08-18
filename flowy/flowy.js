@@ -134,11 +134,11 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
           blocks.push({
                     parent: -1,
                     childwidth: 0,
-                    id: parseInt(drag.querySelector(".blockid").value),
-                    x: (drag.getBoundingClientRect().left + window.scrollX) + (parseInt(window.getComputedStyle(drag).width) / 2) + canvas_div.scrollLeft - canvas_div.getBoundingClientRect().left,
-                    y: (drag.getBoundingClientRect().top + window.scrollY) + (parseInt(window.getComputedStyle(drag).height) / 2) + canvas_div.scrollTop - canvas_div.getBoundingClientRect().top,
-                    width: parseInt(window.getComputedStyle(drag).width),
-                    height: parseInt(window.getComputedStyle(drag).height)
+                    id: parseInt(el.querySelector(".blockid").value),
+                    x: (el.getBoundingClientRect().left + window.scrollX) + (parseInt(window.getComputedStyle(el).width) / 2) + canvas_div.scrollLeft - canvas_div.getBoundingClientRect().left,
+                    y: (el.getBoundingClientRect().top + window.scrollY) + (parseInt(window.getComputedStyle(el).height) / 2) + canvas_div.scrollTop - canvas_div.getBoundingClientRect().top,
+                    width: parseInt(window.getComputedStyle(el).width),
+                    height: parseInt(window.getComputedStyle(el).height)
                 });
         }
 

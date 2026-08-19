@@ -129,7 +129,16 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
           //snap(el, k, blocko);
           //window.alert("add block");
           if(drag){
-
+            // push new element to blocks with the parent of an element id that selected/has css class .selected
+            blocks.push({
+                parent: parseInt(document.querySelector(".selected .blockid").value),
+                childwidth: 0,
+                id: parseInt(el.querySelector(".blockid").value),
+                x: (el.getBoundingClientRect().left + window.scrollX) + (parseInt(window.getComputedStyle(el).width) / 2) + canvas_div.scrollLeft - canvas_div.getBoundingClientRect().left,
+                y: (el.getBoundingClientRect().top + window.scrollY) + (parseInt(window.getComputedStyle(el).height) / 2) + canvas_div.scrollTop - canvas_div.getBoundingClientRect().top,
+                width: parseInt(window.getComputedStyle(el).width),
+                height: parseInt(window.getComputedStyle(el).height)
+            });
           }else{
             blocks.push({
                     parent: -1,

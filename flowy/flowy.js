@@ -115,11 +115,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
             }
         }
         flowy.addBlock = function(el){
-          if (drag) {
-            window.alert("block selected");
-          } else {
-            window.alert("no block selected");
-          }
+          
           el.innerHTML += "<input type='text' name='blockid' class='blockid' value='"+blocks.length+"'";
           let input = document.createElement("input");
           input.classList.add("blockid");
@@ -132,7 +128,10 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
           canvas_div.appendChild(el);
           //snap(el, k, blocko);
           //window.alert("add block");
-          blocks.push({
+          if(drag){
+
+          }else{
+            blocks.push({
                     parent: -1,
                     childwidth: 0,
                     id: parseInt(el.querySelector(".blockid").value),
@@ -141,6 +140,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
                     width: parseInt(window.getComputedStyle(el).width),
                     height: parseInt(window.getComputedStyle(el).height)
                 });
+          }
           window.alert(JSON.stringify(blocks));
         }
 
@@ -447,6 +447,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
                             drag = theblock;
                             dragx = mouse_x - (drag.getBoundingClientRect().left + window.scrollX);
                             dragy = mouse_y - (drag.getBoundingClientRect().top + window.scrollY);
+                            drag.classList.toggle("selected ");
                         }
                     }
                 }

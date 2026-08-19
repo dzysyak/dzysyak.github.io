@@ -447,7 +447,14 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
                             drag = theblock;
                             dragx = mouse_x - (drag.getBoundingClientRect().left + window.scrollX);
                             dragy = mouse_y - (drag.getBoundingClientRect().top + window.scrollY);
-                            drag.classList.toggle("selected ");
+                            drag.classList.toggle("selected");
+                            canvas_div.dispatchEvent(new CustomEvent(
+                                "ToggleBlock", {
+                                detail: {target: drag, selected: drag.classList.contains("selected")},
+                                bubbles: true,
+                                cancelable: true
+                                }
+                            ));
                         }
                     }
                 }

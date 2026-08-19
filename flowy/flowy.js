@@ -140,7 +140,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
                     width: parseInt(window.getComputedStyle(el).width),
                     height: parseInt(window.getComputedStyle(el).height)
                 });
-          window.alert(blocks);
+          window.alert(JSON.stringify(blocks));
         }
 
         flowy.deleteBlocks = function() {

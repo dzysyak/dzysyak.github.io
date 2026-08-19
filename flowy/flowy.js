@@ -126,6 +126,7 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
           input.type = "text";
           input.name = "blockid";
           input.id = "blockid";
+          input.value = blocks.length;
           el.appendChild(input);
 
           canvas_div.appendChild(el);

@@ -151,6 +151,8 @@ var flowy = function(canvas, grab, release, snapping, rearrange, spacing_x, spac
                 });
           }
           window.alert(JSON.stringify(blocks));
+          rearrangeMe();
+          checkOffset();
         }
 
         flowy.deleteBlocks = function() {
